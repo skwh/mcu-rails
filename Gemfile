@@ -4,6 +4,7 @@ gem 'rails', '4.0.3'
 gem 'bootstrap-sass', '2.1'
 gem 'devise'
 gem 'forem', :github => "radar/forem", :branch => "rails4"
+gem 'will_paginate', '3.0.5'
 
 group :development, :test do
 	gem 'sqlite3'
