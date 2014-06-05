@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3p429'
 
 gem 'rails', '4.0.3'
 gem 'bootstrap-sass', '2.1'
@@ -14,6 +15,8 @@ end
 
 group :development do
 	gem 'annotate','2.5.0'
+	gem 'pg', '0.15.1'
+    gem 'rails_12factor', '0.0.2'
 end
 
 group :assets do
