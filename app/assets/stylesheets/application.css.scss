@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= requre 'forem/base'
+ */
+
+body {
+	background-color: white;
+	font-family:"Heveletica","Arial",sans-serif;
+	color:#003243;
+}
+
+.nolink {
+	text-decoration: none;
+	color: inherit;
+}
+
+#slideshow {
+	width:95%;
+	height:25%;
+	margin:auto;
+	border:1px solid black;
+	border-radius:25px;
+	overflow:hidden;
+}
+
+#header {
+	width:95%;
+	height:50px;
+	border:1px solid black;
+	border-radius:25px;
+	border-top:none;
+	padding:5px;
+	margin:auto;
+	position:relative;
+	top:-10px;
+	#center_logo {
+		display:inline-block;
+		font-size:25pt;
+		text-transform: uppercase;
+		margin-top: 7px;
+		margin-left: 5px;
+		margin-right: 5px;
+		width:17%;
+		text-align: center;
+		a:hover {
+			text-shadow: 2px 2px 5px #9E9E9E;
+		}
+	}
+
+	#navbar_left, #navbar_right {
+		width:40%;
+		padding:5px;
+		text-align: center;
+	}
+	#navbar_left {
+		float:left;
+	}
+	#navbar_right {
+		float:right;
+	}
+	ul {
+		list-style-type:none;
+		margin:auto;
+		padding:0;
+		li {
+			display:inline-block;
+			font-size: 20pt;
+			a {
+				text-decoration: none;
+				color:inherit;
+			}
+			a:hover {
+				/*background-color:#9E9E9E;*/
+				text-decoration: underline;
+			}
+		}
+	}
+}
