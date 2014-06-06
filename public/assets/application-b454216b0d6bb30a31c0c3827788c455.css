@@ -1,0 +1,204 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ *= requre 'forem/base'
+ */
+/* line 17, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+body {
+  background-color: white;
+  font-family: "Heveletica","Arial",sans-serif;
+  color: #003243;
+  margin: 0;
+}
+
+/* line 24, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+.nolink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 29, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px;
+}
+/* line 34, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+.box h3 {
+  margin-top: 5px;
+}
+
+/* line 38, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#main_content, #left_sidebar {
+  margin-bottom: 25px;
+}
+
+/* line 42, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#main_content {
+  width: 74%;
+  float: right;
+}
+
+/* line 47, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#left_sidebar {
+  width: 25%;
+  float: left;
+}
+
+/* line 52, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed h2 {
+  margin: 5px;
+}
+/* line 55, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed .news-module {
+  padding: 5px;
+}
+/* line 57, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed .news-module h4 {
+  margin: 2px;
+  margin-left: 5px;
+}
+/* line 61, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed .news-module p {
+  margin: 2px;
+  margin-left: 10px;
+}
+
+/* line 68, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info {
+  text-align: center;
+}
+/* line 70, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info h4 {
+  margin: 5px;
+  font-size: 18pt;
+}
+/* line 74, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info p {
+  margin: 5px;
+}
+/* line 77, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info a:hover {
+  text-decoration: underline;
+}
+
+/* line 83, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#server_info div {
+  margin: auto;
+  width: 90%;
+}
+/* line 87, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#server_info h3 {
+  margin-bottom: 2px;
+}
+
+/* line 92, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#slideshow {
+  width: 95%;
+  height: 25%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid black;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* line 103, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header {
+  width: 95%;
+  height: 50px;
+  border: 1px solid black;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top: none;
+  padding: 5px 0px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+/* line 113, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #center_logo {
+  display: inline-block;
+  font-size: 25pt;
+  text-transform: uppercase;
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 17%;
+  text-align: center;
+}
+/* line 122, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #center_logo a:hover {
+  text-shadow: 2px 2px 5px #9E9E9E;
+}
+/* line 127, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #navbar_left, #header #navbar_right {
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+}
+/* line 132, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #navbar_left {
+  float: left;
+}
+/* line 135, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #navbar_right {
+  float: right;
+}
+/* line 138, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+/* line 142, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul li {
+  display: inline-block;
+  font-size: 20pt;
+}
+/* line 145, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+/* line 149, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul li a:hover {
+  /*background-color:#9E9E9E;*/
+  text-decoration: underline;
+}
+
+/* line 157, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#body {
+  width: 95%;
+  margin: auto;
+}
+
+/* line 162, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#footer {
+  width: 95%;
+  height: 10%;
+  font-size: 10pt;
+  margin: auto;
+  border: 1px solid black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom: none;
+  padding: 5px;
+  text-align: center;
+  clear: both;
+}
+/* line 174, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#footer p {
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
