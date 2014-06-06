@@ -1,0 +1,8 @@
+<% if @events.empty? %>
+	<p>No events to show.</p>
+<% else %> 
+	<% @events.each do |event| %>
+	<div class="event-module">
+		<p><%= link_to event.title, event %></p>
+	<% end %>
+<% end %>
