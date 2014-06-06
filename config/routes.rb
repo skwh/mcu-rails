@@ -8,9 +8,12 @@ McuRails::Application.routes.draw do
   mount Forem::Engine, :at => '/forums'
 
   devise_for :users
+  
   root 'static_pages#home'
 
   get 'about' => 'static_pages#about', as: :about
+  get 'handbook' => 'static_pages#handbook', as: :handbook
+  get 'media' => 'static_pages#media', as: :media
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

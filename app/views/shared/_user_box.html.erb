@@ -1,0 +1,8 @@
+<div id="user_info" class="box small-box">
+	<% if user_signed_in? %>
+		<p>Signed in User info goes here</p>
+	<% else %>
+		<p><%= link_to "Sign up", main_app.new_user_registration_path %></p>
+		<p><%= link_to "Sign in", main_app.new_user_session_path %></p>
+	<% end %>
+</div>

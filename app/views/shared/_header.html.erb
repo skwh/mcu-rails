@@ -1,19 +1,19 @@
 <div id="header">
 	<div id="navbar_left">
 		<ul>
-			<li><%= link_to "About", :about %></li>
-			<li><%= link_to "Forums" %></li>
+			<li><%= link_to "About", main_app.about_path %></li>
+			<li><%= link_to "Forums", forem.root_path %></li>
 			<li><%= link_to "Events" %></li>
 		</ul>
 	</div>
 	<div id="center_logo">
-		<%= link_to "19th MCU", :root, {class:"nolink"} %>
+		<%= link_to "19th MCU", main_app.root_path, {class:"nolink"} %>
 	</div>
 	<div id="navbar_right">
 		<ul>
 			<li><%= link_to "Join"  %></li>
-			<li><%= link_to "Handbook" %></li>
-			<li><%= link_to "Media" %></li>
+			<li><%= link_to "Handbook", main_app.handbook_path %></li>
+			<li><%= link_to "Media", main_app.media_path %></li>
 		</ul>
 	</div>
 </div>

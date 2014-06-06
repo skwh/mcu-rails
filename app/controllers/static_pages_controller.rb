@@ -4,4 +4,10 @@ class StaticPagesController < ApplicationController
 
 	def about
 	end
+
+	def handbook
+	end
+
+	def media
+	end
 end

@@ -8,10 +8,16 @@
 </head>
 <body>
 	<%= render 'shared/header' %>
+	<% if !user_signed_in? %>
+		<%= render 'shared/slider' %>
+	<% end %>
 	<div id="messages">
 		<p class="notice"><%= notice %></p>
     	<p class="alert"><%= alert %></p>
 	</div>
-	<%= yield %>
+	<div id="body">
+		<%= yield %>
+	</div>
+	<%= render 'shared/footer' %>
 </body>
 </html>

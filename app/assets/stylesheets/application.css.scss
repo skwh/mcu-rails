@@ -17,6 +17,7 @@ body {
 	background-color: white;
 	font-family:"Heveletica","Arial",sans-serif;
 	color:#003243;
+	margin:0;
 }
 
 .nolink {
@@ -24,10 +25,35 @@ body {
 	color: inherit;
 }
 
+.box {
+	border: 1px solid black;
+	padding:10px;
+	border-radius:25px;
+	margin:10px;
+	h3 {
+		margin-top: 5px;
+	}
+}
+#main_content, #left_sidebar {
+	margin-bottom:25px;
+}
+
+#main_content {
+	width:74%;
+	float:right;
+}
+
+#left_sidebar {
+	width:25%;
+	float:left;
+}
+
 #slideshow {
 	width:95%;
 	height:25%;
 	margin:auto;
+	margin-top:25px;
+	margin-bottom:25px;
 	border:1px solid black;
 	border-radius:25px;
 	overflow:hidden;
@@ -37,12 +63,12 @@ body {
 	width:95%;
 	height:50px;
 	border:1px solid black;
-	border-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
 	border-top:none;
-	padding:5px;
+	padding:5px 0px;
 	margin:auto;
-	position:relative;
-	top:-10px;
+	margin-bottom:25px;
 	#center_logo {
 		display:inline-block;
 		font-size:25pt;
@@ -86,3 +112,27 @@ body {
 		}
 	}
 }
+
+#body {
+	width:95%;
+	margin:auto;
+}
+
+#footer {
+	width:95%;
+	height:10%;
+	font-size:10pt;
+	margin:auto;
+	border:1px solid black;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom:none;
+	padding:5px;
+	text-align:center;
+	clear:both;
+	p {
+		margin-top:2px;
+		margin-bottom: 0px;
+	}
+}
+
