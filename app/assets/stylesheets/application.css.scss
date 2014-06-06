@@ -47,6 +47,23 @@ body {
 	width:25%;
 	float:left;
 }
+#news_feed {
+	h2 {
+		margin:5px;
+	}
+	.news-module {
+		padding:5px;
+		h4 {
+			margin:2px;
+			margin-left:5px;
+		}
+		p {
+			margin:2px;
+			margin-left:10px;
+		}
+	}
+}
+
 #user_info {
 	text-align:center;
 	h4 {
