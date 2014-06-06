@@ -26,10 +26,11 @@ body {
 }
 
 .box {
-	border: 1px solid black;
+	border: 2px solid black;
 	padding:10px;
 	border-radius:25px;
 	margin:10px;
+	background-color:lightgrey;
 	h3 {
 		margin-top: 5px;
 	}
@@ -94,7 +95,7 @@ body {
 	margin:auto;
 	margin-top:25px;
 	margin-bottom:25px;
-	border:1px solid black;
+	border:2px solid black;
 	border-radius:25px;
 	overflow:hidden;
 }
@@ -102,22 +103,28 @@ body {
 #header {
 	width:95%;
 	height:50px;
-	border:1px solid black;
+	border:2px solid black;
+	background-color:lightgrey;
 	border-bottom-left-radius:25px;
 	border-bottom-right-radius:25px;
 	border-top:none;
-	padding:5px 0px;
+	padding-bottom:5px;
 	margin:auto;
 	margin-bottom:25px;
 	#center_logo {
 		display:inline-block;
 		font-size:25pt;
 		text-transform: uppercase;
+		position: relative;
 		margin-top: 7px;
 		margin-left: 5px;
 		margin-right: 5px;
 		width:17%;
+		height:100%;
 		text-align: center;
+		a {
+			vertical-align: bottom;
+		}
 		a:hover {
 			text-shadow: 2px 2px 5px #9E9E9E;
 		}
@@ -163,13 +170,14 @@ body {
 	height:10%;
 	font-size:10pt;
 	margin:auto;
-	border:1px solid black;
+	border:2px solid black;
 	border-top-left-radius:25px;
 	border-top-right-radius:25px;
 	border-bottom:none;
 	padding:5px;
 	text-align:center;
 	clear:both;
+	background-color:lightgrey;
 	p {
 		margin-top:2px;
 		margin-bottom: 0px;
