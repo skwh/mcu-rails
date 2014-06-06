@@ -13,6 +13,11 @@
  *= requre 'forem/base'
  */
 
+ @font-face {
+ 	font-family:Blockschrift;
+ 	src: url(/assets/fonts/Blockschrift.ttf);
+ }
+
 body {
 	background-color: white;
 	font-family:"Heveletica","Arial",sans-serif;
@@ -122,6 +127,7 @@ body {
 		width:17%;
 		height:100%;
 		text-align: center;
+		font-family:Blockschrift,sans-serif;
 		a {
 			vertical-align: bottom;
 		}
