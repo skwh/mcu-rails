@@ -15,17 +15,17 @@
 
  @font-face {
  	font-family:Blockschrift;
- 	src: url(Blockschrift.ttf);
+ 	src: asset-url("Blockschrift.ttf");
  }
 
  @font-face {
  	font-family:BebasNeue;
- 	src: url(BebasNeue.otf);
+ 	src: asset-url("BebasNeue.otf");
  }
 
  @font-face {
  	font-family:FlamaBook;
- 	src: url(FlamaBook.otf);
+ 	src: asset-url("FlamaBook.otf");
  }
 
 body {
