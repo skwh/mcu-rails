@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
+  before_filter :fetch_events
+
+  def fetch_events
+  	@events = Event.all
+  end
 
   def forem_user
     current_user

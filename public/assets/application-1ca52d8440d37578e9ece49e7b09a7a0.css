@@ -1,0 +1,265 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ *= requre 'forem/base'
+ */
+@font-face {
+  font-family: Blockschrift;
+  src: url(/assets/Blockschrift.ttf);
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url(/assets/BebasNeue.otf);
+}
+
+@font-face {
+  font-family: FlamaBook;
+  src: url(/assets/FlamaBook.otf);
+}
+
+/* line 32, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+body {
+  background-color: #787878;
+  /*background-image:url(brushed.png);*/
+  font-family: "Heveletica","Arial",sans-serif;
+  color: #003243;
+  margin: 0;
+}
+
+/* line 40, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+h1, h2, h3, h4, h5 {
+  font-family: "BebasNeue", sans-serif !important;
+}
+
+/* line 43, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+h1 {
+  font-size: 20pt !important;
+}
+
+/* line 46, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+h2 {
+  font-size: 18pt !important;
+}
+
+/* line 49, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+h3 {
+  font-size: 16pt !important;
+}
+
+/* line 52, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+h4 {
+  font-size: 14pt !important;
+}
+
+/* line 56, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+p, span {
+  font-family: "FlamaBook", sans-serif !important;
+}
+
+/* line 60, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+.nolink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 65, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+.box {
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 10px;
+  background-color: lightgrey;
+}
+/* line 71, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+.box h3 {
+  margin-top: 5px;
+}
+
+/* line 75, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#main_content, #left_sidebar {
+  margin-bottom: 25px;
+}
+
+/* line 79, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#main_content {
+  width: 74%;
+  float: right;
+}
+
+/* line 84, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#left_sidebar {
+  width: 25%;
+  float: left;
+}
+
+/* line 89, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed h2 {
+  margin: 5px;
+}
+/* line 92, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed .news-module {
+  padding: 5px;
+}
+/* line 94, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed .news-module h4 {
+  margin: 2px;
+  margin-left: 5px;
+}
+/* line 98, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#news_feed .news-module p {
+  margin: 2px;
+  margin-left: 10px;
+}
+
+/* line 105, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info {
+  text-align: center;
+}
+/* line 107, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info h4 {
+  margin: 5px;
+  font-size: 18pt;
+}
+/* line 111, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info p {
+  margin: 5px;
+}
+/* line 114, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#user_info a:hover {
+  text-decoration: underline;
+}
+
+/* line 120, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#server_info div {
+  margin: auto;
+  width: 90%;
+}
+/* line 124, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#server_info h3 {
+  margin-bottom: 2px;
+}
+
+/* line 129, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#slideshow {
+  width: 95%;
+  height: 25%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 2px solid black;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* line 140, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header {
+  width: 95%;
+  height: 50px;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top: none;
+  padding-bottom: 5px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+/* line 151, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #center_logo {
+  display: inline-block;
+  font-size: 35pt;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 25px;
+  text-align: center;
+  width: 17%;
+  height: 100%;
+  text-align: center;
+  font-family: "Blockschrift",sans-serif;
+}
+/* line 163, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #center_logo a {
+  vertical-align: bottom;
+}
+/* line 166, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #center_logo a:hover {
+  text-shadow: 2px 2px 5px #9E9E9E;
+}
+/* line 171, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #navbar_left, #header #navbar_right {
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+}
+/* line 176, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #navbar_left {
+  float: left;
+}
+/* line 179, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header #navbar_right {
+  float: right;
+}
+/* line 182, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+/* line 186, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul li {
+  display: inline-block;
+  font-size: 25pt;
+}
+/* line 189, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "BebasNeue", sans-serif;
+}
+/* line 194, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#header ul li a:hover {
+  /*background-color:#9E9E9E;*/
+  text-decoration: underline;
+}
+
+/* line 202, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#body {
+  width: 95%;
+  margin: auto;
+}
+
+/* line 207, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#footer {
+  width: 95%;
+  font-size: 10pt;
+  margin: auto;
+  border: 2px solid black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom: none;
+  padding: 5px;
+  text-align: center;
+  clear: both;
+  background-color: lightgrey;
+  position: fixed;
+  bottom: 0px;
+}
+/* line 221, /home/skwh/Documents/rails_projects/mcu-rails/app/assets/stylesheets/application.css.scss */
+#footer p {
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}

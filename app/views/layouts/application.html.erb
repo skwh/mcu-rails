@@ -16,7 +16,14 @@
     	<p class="alert"><%= alert %></p>
 	</div>
 	<div id="body">
-		<%= yield %>
+		<div id="left_sidebar">
+			<%= render 'shared/user_box' %>
+			<%= render 'shared/event_box' %>
+			<%= render 'shared/server_info_box' %>
+		</div>
+		<div id="main_content">
+			<%= yield %>
+		</div>
 	</div>
 	<%= render 'shared/footer' %>
 </body>

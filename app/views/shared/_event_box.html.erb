@@ -1,4 +1,6 @@
-<div id="event_box" class="box small-box">
-	<h3>Events</h3>
-	<%= render 'events/feed' %>
-</div>
+<% if !current_page?('/forums/') and !current_page?(controller:'/events') %>
+	<div id="event_box" class="box small-box">
+		<h3>Events</h3>
+		<%= render 'events/feed' %>
+	</div>
+<% end %>

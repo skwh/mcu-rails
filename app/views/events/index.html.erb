@@ -1,35 +1,28 @@
-<h1>Listing events</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Date</th>
-      <th>Invited</th>
-      <th>Attending</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="box">
+  <h2>Events</h2>
+  <span id="calendar">
+    <p>Calendar goes here</p>
+  </span>
+  <div>
+    <h2>Event listing</h2>
     <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.date %></td>
-        <td><%= event.invited %></td>
-        <td><%= event.attending %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="event_box">
+        <h3><%= event.title %></h3>
+        <p><%= event.description %></p>
+        <% if !event.date.nil? %>
+          <p><%= event.date.strftime("%B %d, %Y, %l:%M %:z %Z") %>
+        <% else %>
+          <p>This event doesn't seem to have a date...</p>
+        <% end %>
+        <h4>Attending:</h4>
+        <p>Attending helper goes here</p>
+        <h4>Invited</h4>
+        <p>Invited helper goes here</p>
+        <% if user_signed_in? and user_is_admin? then %>
+          <p><%= link_to "Edit", edit_event_path(event) %> | <%= link_to "Delete", delete_event_path(event) %></p>
+        <% end %>
+      </div>
+      <hr />
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
+  </div>
+</div>

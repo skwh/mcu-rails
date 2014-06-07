@@ -1,9 +1,11 @@
-<% if @events.empty? %>
-	<p>No events to show.</p>
-<% else %> 
-	<% @events.each do |event| %>
-	<div class="event-module">
-		<p><%= link_to event.title, event %></p>
-	</div>
+<% cache('all_avaliable_events') do %>
+	<% if @events.empty? %>
+		<p>No events to show.</p>
+	<% else %>
+		<ul> 
+		<% @events.each do |event| %>
+			<li><%= link_to event.title, event, {class:'nolink'} %></li>
+		<% end %>
+		</ul>
 	<% end %>
 <% end %>
