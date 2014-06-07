@@ -4,7 +4,7 @@
 	<% @news.each do |news| %>
 	<div class="news-module">
 		<h4><%= news.title %></h4>
-		<p>By <% if news.user.nil? or news.user.name.empty? then puts("Anon") else puts(news.user.name) end %> at <%= news.created_at %></p>
+		<p>By <% if news.user.nil? or news.user.name.empty? then "Anon" else news.user.name end %> at <%= news.created_at %></p>
 		<p><%= news.text %></p>
 		<% if user_signed_in? and current_user.is_admin? %>
 		<p><%= link_to "Edit", edit_news_path(news) %><br />
