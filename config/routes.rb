@@ -11,6 +11,7 @@ McuRails::Application.routes.draw do
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
   mount Forem::Engine, :at => '/forums'
 
+  get '/u/:id' => 'user#show', as: :user
   devise_for :users
   
   root 'static_pages#home'
@@ -18,6 +19,8 @@ McuRails::Application.routes.draw do
   get 'about' => 'static_pages#about', as: :about
   get 'handbook' => 'static_pages#handbook', as: :handbook
   get 'media' => 'static_pages#media', as: :media
+  get 'admin' => 'static_pages#admin', as: :admin
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

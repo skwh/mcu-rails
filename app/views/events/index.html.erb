@@ -18,7 +18,7 @@
         <p>Attending helper goes here</p>
         <h4>Invited</h4>
         <p>Invited helper goes here</p>
-        <% if user_signed_in? and user_is_admin? then %>
+        <% if user_signed_in? and current_user.admin? then %>
           <p><%= link_to "Edit", edit_event_path(event) %> | <%= link_to "Delete", delete_event_path(event) %></p>
         <% end %>
       </div>

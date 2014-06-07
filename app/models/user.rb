@@ -14,10 +14,6 @@ class User < ActiveRecord::Base
   	email_address
   end
 
-  def is_admin?
-    admin
-  end
-
   private
     def user_params
       params.require(:user).permit(:name, :email, :admin)

@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+	include ApplicationHelper
+	before_action :check_admin_status, only: [:admin]
+
 	def home
 		@news = News.all
 		@events = Event.all
@@ -11,5 +14,11 @@ class StaticPagesController < ApplicationController
 	end
 
 	def media
+	end
+
+	def admin
+		@users = User.all
+		@news = News.all
+		@events = Event.all
 	end
 end

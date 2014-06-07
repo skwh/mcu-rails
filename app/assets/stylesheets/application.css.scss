@@ -28,9 +28,12 @@
  	src: asset-url("FlamaBook.otf");
  }
 
+p, span, li, label {
+	font-family: "FlamaBook", sans-serif !important;
+}
+
 body {
 	background-color: #787878;
-	/*background-image:url(brushed.png);*/
 	font-family:"Heveletica","Arial",sans-serif;
 	color:#003243;
 	margin:0;
@@ -52,16 +55,20 @@ h4 {
 	font-size:14pt !important;
 }
 
-p,span,li {
-	font-family: "FlamaBook", sans-serif !important;
+a {
+	color:inherit;
 }
 
 .nolink {
 	text-decoration: none;
 	color: inherit;
 }
+.hidden {
+	display:none;
+}
 
 .box {
+	font-family: "FlamaBook", sans-serif !important;
 	border: 2px solid black;
 	padding:10px;
 	border-radius:25px;
@@ -84,6 +91,12 @@ p,span,li {
 	width:25%;
 	float:left;
 }
+
+#messages {
+	width:92%;
+	margin:auto;
+}
+
 #news_feed {
 	h2 {
 		margin:5px;
@@ -116,7 +129,7 @@ p,span,li {
 }
 
 #server_info {
-	div {
+	div, div iframe {
 		margin:auto;
 		width:90%;
 	}
@@ -220,8 +233,6 @@ p,span,li {
 	text-align:center;
 	clear:both;
 	background-color:lightgrey;
-	position:fixed;
-	bottom:0px;
 	p {
 		margin-top:2px;
 		margin-bottom: 0px;
