@@ -1,3 +1,8 @@
 <div class="box">
 <h2><%= @user.name %></h2>
+<% if user_signed_in? and current_user == @user then %>
+<p><%= @user.email %></p>
+<p><%= link_to "Edit details", main_app.edit_user_registration_path %></p>
+<% end %>
+<h3>Posts by <%= @user.name %></h3>
 </div>

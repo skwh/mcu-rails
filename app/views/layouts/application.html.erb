@@ -9,17 +9,11 @@
 <body>
 	<%= render 'shared/header' %>
 	<div id="messages" <% if !flash.empty? then %>class="box"<% end %>>
-		<p class="notice"><%= notice %></p>
-    	<p class="alert"><%= alert %></p>
-    	<div class="flash">
-    		<% flash.each do |n, m| %>
-    			<%= content_tag :p, m, class:n %>
-    		<% end %>
-    	</div>
+    	<% flash.each do |n, m| %>
+    		<%= content_tag :p, m, class:n %>
+    	<% end %>
 	</div>
-	<% if !user_signed_in? %>
-		<%= render 'shared/slider' %>
-	<% end %>
+	<%= render 'shared/slider' %>
 	<div id="body">
 		<div id="left_sidebar">
 			<%= render 'shared/user_box' %>
