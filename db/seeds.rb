@@ -22,16 +22,8 @@ events = Event.create(
 		[
 			{
 				title:"Bootcamp",
-				description:"Bootcamp for cadets to the 19th"
-			}
-		]
-	)
-users = User.create(
-		[
-			{
-				name:"Squared",
-				email:"somekidwithhtml@gmail.com",
-				admin:true
+				description:"Bootcamp for cadets to the 19th",
+				date:DateTime.now
 			}
 		]
 	)

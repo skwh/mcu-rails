@@ -25,7 +25,8 @@
   <strong>Attending:</strong>
   <%= @event.attending %>
 </p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<% if bool_au? %>
+  <%= link_to 'Edit', edit_event_path(@event) %> | 
+<% end %>
 <%= link_to 'Back', events_path %>
 </div>

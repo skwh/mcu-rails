@@ -1,6 +1,6 @@
 <div id="news_feed" class="box large-box">
 	<h2><%= link_to "News Feed", main_app.news_index_path, {class:'nolink'} %></h2>
-	<% if user_signed_in? and current_user.admin? %>
+	<% if bool_au? %>
 		<p><%= link_to "New News Item", main_app.new_news_path %></p>
 	<% end %>
 	<%= render 'news/feed' %>
