@@ -28,6 +28,10 @@
  	src: asset-url("FlamaBook.otf");
  }
 
+i, cite, em, var, address, dfn {
+	font-style:italic !important;
+}
+
 p, span, li, label {
 	font-family: "FlamaBook", sans-serif !important;
 }

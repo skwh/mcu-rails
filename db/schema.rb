@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608201516) do
+ActiveRecord::Schema.define(version: 20140609022611) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -120,10 +120,11 @@ ActiveRecord::Schema.define(version: 20140608201516) do
 
   create_table "news", force: true do |t|
     t.string   "title"
-    t.text     "text",       limit: 255
+    t.text     "text",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.text     "parsed_text",             default: ""
   end
 
   create_table "users", force: true do |t|

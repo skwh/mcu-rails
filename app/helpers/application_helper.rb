@@ -39,4 +39,10 @@ module ApplicationHelper
 		bool_user? and bool_admin?
 	end
 
+	def markdown(text)
+		markdown_obj = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+    :autolink => true, :space_after_headers => true)
+		return markdown_obj.render(text)
+	end
+
 end

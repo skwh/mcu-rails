@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '2.1'
 gem 'devise'
 gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'will_paginate', '3.0.5'
+gem 'redcarpet'
 
 group :development, :test do
 	gem 'rspec-rails', '2.11.0'

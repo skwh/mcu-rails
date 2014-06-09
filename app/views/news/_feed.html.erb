@@ -5,7 +5,7 @@
 	<div class="news-module">
 		<h4><%= link_to news.title, news, {class:'nolink'} %></h4>
 		<p>By <% if news.user.nil? or news.user.name.empty? %> Anon <% else %> <%= link_to news.user.name, user_path(news.user) %> <% end %> at <%= news.created_at %></p>
-		<p><%= news.text %></p>
+		<p><%= news.parsed_text.html_safe %></p>
 		<% if bool_au? %>
 		<p><%= link_to "Edit", edit_news_path(news) %><br />
 		<%= link_to "Delete", news, method: :delete, data: { confirm: 'Are you sure?' } %></p>

@@ -28,6 +28,7 @@ class NewsController < ApplicationController
   def create
     @news = News.new(news_params)
     @news.user = current_user
+    @news.parsed_text = markdown(@news.text)
     respond_to do |format|
       if @news.save
         format.html { redirect_to @news, notice: 'News was successfully created.' }
@@ -43,6 +44,7 @@ class NewsController < ApplicationController
   # PATCH/PUT /news/1.json
   def update
     respond_to do |format|
+      @news.parsed_text = markdown(params[:news][:text])
       if @news.update(news_params)
         format.html { redirect_to @news, notice: 'News was successfully updated.' }
         format.json { head :no_content }
