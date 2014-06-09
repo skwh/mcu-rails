@@ -1,6 +1,6 @@
 <div id="user_info" class="box small-box">
 	<% if user_signed_in? %>
-		<h3><%= link_to current_user.name, user_path(current_user.id) %></h3>
+		<h3><%= link_to current_user.name, main_app.user_path(current_user.id) %></h3>
 		<p><%= link_to "Sign Out", main_app.destroy_user_session_path, method: :delete %></p>
 		<% if current_user.admin? %>
 		<p><%= link_to "Admin Controls", main_app.admin_path %></p>
