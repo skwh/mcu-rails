@@ -10,11 +10,13 @@ news = News.create(
 		[
 			{
 				title:"Gamespy shutting down",
-				text:"For those that are not aware, Gamespy announced about a month ago, that they would be shutting down their servers (aka the ingame multiplayer server browers, that is all going thru Gamespy), to popular games like the Battlefield Series, Arma Series.. and many more..    I am under the impression that they are in the works to get Steam to take over that ingame work, but not sure if it will be in effect by Sat....\nSo please bear with us, our server MAY be down for a few hours/days until we know how to get the server reporting to Steam.\n-19th Staff"
+				text:"For those that are not aware, Gamespy announced about a month ago, that they would be shutting down their servers (aka the ingame multiplayer server browers, that is all going thru Gamespy), to popular games like the Battlefield Series, Arma Series.. and many more..    I am under the impression that they are in the works to get Steam to take over that ingame work, but not sure if it will be in effect by Sat....\nSo please bear with us, our server MAY be down for a few hours/days until we know how to get the server reporting to Steam.\n-19th Staff",
+				parsed_text:"For those that are not aware, Gamespy announced about a month ago, that they would be shutting down their servers (aka the ingame multiplayer server browers, that is all going thru Gamespy), to popular games like the Battlefield Series, Arma Series.. and many more..    I am under the impression that they are in the works to get Steam to take over that ingame work, but not sure if it will be in effect by Sat....\nSo please bear with us, our server MAY be down for a few hours/days until we know how to get the server reporting to Steam.\n-19th Staff"
 			},
 			{
 				title:"New Pilots",
-				text:"Raven has aquired new pilots. Hooray."
+				text:"Raven has aquired new pilots. *Hooray*.",
+				parsed_text:"Raven has aquired new pilots. <em>Hooray</em>."
 			}
 		]
 	)

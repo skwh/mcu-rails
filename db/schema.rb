@@ -121,9 +121,9 @@ ActiveRecord::Schema.define(version: 20140609022611) do
   create_table "news", force: true do |t|
     t.string   "title"
     t.text     "text",        limit: 255
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
     t.text     "parsed_text",             default: ""
   end
 
