@@ -1,3 +1,23 @@
 <div class="box">
 <h2>Admin Controls</h2>
+<h3>Users</h3>
+<ul>
+<% @users.each do |u| %>
+	<li><%= link_to u.name, user_path(u) %><% if u != current_user %> | <% if !u.admin? %><%= link_to "Set as admin", main_app.edit_user_registration_path %><% else %><%= link_to "Remove admin", main_app.edit_user_registration_path %><% end %><% else %>- This is you!<% end %></li>
+<% end %>
+</ul>
+<hr />
+<h3>News Posts</h3>
+<ul>
+<% @news.each do |n| %>
+	<li><%= link_to n.title, news_path(n) %></li>
+<% end %>
+</ul>
+<hr />
+<h3>Events</h3>
+<ul>
+	<% @events.each do |e| %>
+	<li><%= link_to e.title, event_path(e) %></li>
+<% end %>
+</ul>
 </div>
