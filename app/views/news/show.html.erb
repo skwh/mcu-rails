@@ -1,13 +1,6 @@
 <div class="box">
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @news.parsed_text.html_safe %>
-</p>
+<h2><%= @news.title %></h2>
+<p><%= @news.parsed_text.html_safe %></p>
 <% if bool_au? %>
 	<%= link_to 'Edit', edit_news_path(@news) %> |
 <% end %>

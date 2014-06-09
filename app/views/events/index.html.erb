@@ -5,6 +5,12 @@
   </span>
   <div>
     <h2>Event listing</h2>
+    <% if bool_au? then %>
+      <p><%= link_to "New Event", main_app.new_event_path %> </p>
+    <% end %>
+    <% if @events.empty? %>
+    <p> There are no events to show at this time.</p>
+    <% else %>
     <% @events.each do |event| %>
       <div class="event_box">
         <h3><%= event.title %></h3>
@@ -19,10 +25,11 @@
         <h4>Invited</h4>
         <p>Invited helper goes here</p>
         <% if bool_au? then %>
-          <p><%= link_to "Edit", edit_event_path(event) %> | <%= link_to "Delete", delete_event_path(event) %></p>
+          <p><%= link_to "Edit", main_app.edit_event_path(event) %> | <%= link_to "Delete", main_app.event_path(event), method: :delete %></p>
         <% end %>
       </div>
       <hr />
+    <% end %>
     <% end %>
   </div>
 </div>
