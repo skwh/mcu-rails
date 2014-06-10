@@ -1,19 +1,13 @@
 <div class="box">
   <p id="notice"><%= notice %></p>
+<h2><%= @event.title %></h2>
 
 <p>
-  <strong>Title:</strong>
-  <%= @event.title %>
+  At <%= @event.date %>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @event.description %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
 </p>
 
 <p>

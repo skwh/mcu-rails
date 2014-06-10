@@ -4,5 +4,12 @@
 <p><%= @user.email %></p>
 <p><%= link_to "Edit details", main_app.edit_user_registration_path %></p>
 <% end %>
+<% if !@user.news.nil? and !@user.news.empty? then %>
 <h3>Posts by <%= @user.name %></h3>
+<ul>
+<% @user.news.each do |n| %>
+<li><%= link_to n.title, main_app.news_path(n) %></li>
+<% end %>
+</ul>
+<% end%>
 </div>
