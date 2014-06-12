@@ -82,6 +82,24 @@ a {
 		margin-top: 5px;
 	}
 }
+
+.box ul {
+	list-style-type:disc !important;
+	margin:15px !important;
+	ul {
+		margin:2px !important;
+		margin-left:8px !important;
+		list-style-type: square !important;
+	}
+}
+
+.subbox-content {
+	text-align:center;
+	a {
+		color:rgb(128,0,0);
+	}
+}
+
 #main_content, #left_sidebar {
 	margin-bottom:25px;
 }
