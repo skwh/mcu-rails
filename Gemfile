@@ -7,6 +7,7 @@ gem 'devise'
 gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'will_paginate', '3.0.5'
 gem 'redcarpet'
+gem 'acts-as-taggable-on'
 
 group :development, :test do
 	gem 'rspec-rails', '2.11.0'
