@@ -1,5 +1,11 @@
 McuRails::Application.routes.draw do
 
+  resources :platoons
+
+  resources :squads
+
+  resources :fireteams
+
   resources :events
 
   resources :news

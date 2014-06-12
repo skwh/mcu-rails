@@ -20,5 +20,8 @@ class StaticPagesController < ApplicationController
 		@users = User.all
 		@news = News.all
 		@events = Event.all
+		@platoons = Platoon.all
+		@squads = Squad.all
+		@fireteams = Fireteam.all
 	end
 end

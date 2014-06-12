@@ -1,0 +1,7 @@
+<div class="box">
+	<%= render 'partials/group_content', :item => @squad, :page => "Squad" %>
+<% if bool_au? %>
+<%= link_to 'Edit', edit_squad_path(@squad) %> |
+<% end %>
+<%= link_to 'Back', squads_path %>
+</div>

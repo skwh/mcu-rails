@@ -1,0 +1,6 @@
+<h2><%= title %>s</h2>
+<ul>
+<% items.each do |i| %>
+<li><h3><%= link_to i.name, title.downcase+'s/'+i.id.to_s %></h3></li>
+<% end %>
+</ul>

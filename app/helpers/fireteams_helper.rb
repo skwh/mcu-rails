@@ -1,0 +1,2 @@
+module FireteamsHelper
+end

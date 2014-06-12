@@ -29,3 +29,86 @@ events = Event.create(
 			}
 		]
 	)
+
+platoons = Platoon.create(
+		[
+			{
+				name:"Able"
+			}
+		]
+	)
+squads = Squad.create(
+		[
+			{
+				name:"Alpha",
+				insignia_url:"http://i.imgur.com/iXokc68.png",
+				platoon_id:1
+			},
+			{
+				name:"Bravo",
+				platoon_id:1
+			},
+			{
+				name:"Charlie",
+				platoon_id:1
+			},
+			{
+				name:"Reaper",
+				insignia_url:"http://i.imgur.com/QV58SUr.png",
+				platoon_id:1
+			},
+			{
+				name:"Raven",
+				insignia_url:"http://i.imgur.com/kZsqZBK.png",
+				platoon_id:1
+			}
+		]
+	)
+fireteams = Fireteam.create(
+		[
+			{
+				name:"Alpha 1-1",
+				squad_id:1
+			},
+			{
+				name:"Alpha 1-2",
+				squad_id:1
+			},
+			{
+				name:"Alpha 1-3",
+				squad_id:1
+			},
+			{
+				name:"Bravo 1-1",
+				squad_id:2
+			},
+			{
+				name:"Bravo 1-2",
+				squad_id:2
+			},
+			{
+				name:"Bravo 1-3",
+				squad_id:2
+			},
+			{
+				name:"Charlie 1-1",
+				squad_id:3
+			},
+			{
+				name:"Charlie 1-2",
+				squad_id:3
+			},
+			{
+				name:"Charlie 1-3",
+				squad_id:3
+			},
+			{
+				name:"Reaper",
+				squad_id:4
+			},
+			{
+				name:"Raven",
+				squad_id:5
+			}
+		]
+	)

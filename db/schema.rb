@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612030312) do
+ActiveRecord::Schema.define(version: 20140612184258) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20140612030312) do
     t.datetime "date"
     t.string   "invited"
     t.string   "attending"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fireteams", force: true do |t|
+    t.string   "name"
+    t.string   "insignia_url"
+    t.integer  "squad_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -127,6 +135,21 @@ ActiveRecord::Schema.define(version: 20140612030312) do
     t.text     "parsed_text",             default: ""
   end
 
+  create_table "platoons", force: true do |t|
+    t.string   "name"
+    t.string   "insignia_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "squads", force: true do |t|
+    t.string   "name"
+    t.string   "insignia_url"
+    t.integer  "platoon_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -164,7 +187,7 @@ ActiveRecord::Schema.define(version: 20140612030312) do
     t.boolean  "forem_auto_subscribe",   default: false
     t.string   "name"
     t.boolean  "admin",                  default: false
-    t.string   "rank"
+    t.string   "rank",                   default: "Cadet"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
   include ApplicationHelper
   before_action :set_news, only: [:show, :edit, :update, :destroy]
-  before_action :check_login_status, only:[:edit, :new, :destroy]
+  before_action :check_admin_status, only:[:edit, :new, :destroy]
 
   # GET /news
   # GET /news.json

@@ -1,0 +1,6 @@
+<div class="display-box-header">
+ <h2><%= item.name %> <%= page %></h2>
+ <% if !item.insignia_url.nil? and !item.insignia_url.empty? %>
+ <%= image_tag(item.insignia_url) %>
+ <% end %>
+</div>
