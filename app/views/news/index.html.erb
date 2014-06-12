@@ -3,7 +3,7 @@
   <% @news.each do |news| %>
       <div>
         <h3><%= link_to news.title, news %></h3>
-        <p>By <% if news.user.nil? or news.user.name.empty? %> Anon <% else %> news.user.name <% end %> at <%= news.created_at %></p>
+        <p>By <% if news.user.nil? or news.user.name.empty? %> Anon <% else %><%= news.user.full_name %><% end %> at <%= news.created_at %></p>
         <p><%= news.parsed_text.html_safe %></p>
         <% if bool_au? %>
         <p><%= link_to 'Edit', edit_news_path(news) %> | <%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></p>

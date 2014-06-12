@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   acts_as_taggable
-  acts_as_taggable_on :rank
   has_many :news
 
   def forem_name
@@ -15,8 +14,12 @@ class User < ActiveRecord::Base
   	email_address
   end
 
+  def full_name
+    "[#{rank}] #{name}"
+  end
+
   private
     def user_params
-      params.require(:user).permit(:name, :email, :admin)
+      params.require(:user).permit(:name, :email, :admin, :rank)
     end
 end

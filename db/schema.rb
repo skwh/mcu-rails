@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612004119) do
+ActiveRecord::Schema.define(version: 20140612030312) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -164,6 +164,7 @@ ActiveRecord::Schema.define(version: 20140612004119) do
     t.boolean  "forem_auto_subscribe",   default: false
     t.string   "name"
     t.boolean  "admin",                  default: false
+    t.string   "rank"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

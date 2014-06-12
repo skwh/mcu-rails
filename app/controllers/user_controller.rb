@@ -5,7 +5,7 @@ class UserController < ApplicationController
 	end
 
 	def index
-		@users = User.all
+		@admins = User.where(admin:true)
 	end
 
 end

@@ -1,6 +1,6 @@
 <div class="box">
 <h2><%= @news.title %></h2>
-<p>By <%= link_to @news.user.name, main_app.user_path(@news.user) %> at <%= @news.created_at %></p>
+<p>By <%= link_to @news.user.full_name, main_app.user_path(@news.user) %> at <%= @news.created_at %></p>
 <p><%= @news.parsed_text.html_safe %></p>
 <% if bool_au? %>
 	<%= link_to 'Edit', edit_news_path(@news) %> |
