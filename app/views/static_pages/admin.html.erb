@@ -10,14 +10,14 @@
 <h3>News Posts</h3>
 <ul>
 <% @news.each do |n| %>
-	<li><%= link_to n.title, news_path(n) %></li>
+	<li><%= link_to n.title, news_path(n) %> - <%= link_to "Edit", main_app.edit_news_path(n) %> | <%= link_to "Delete", main_app.news_path(n), method: :delete %></li>
 <% end %>
 </ul>
 <hr />
 <h3>Events</h3>
 <ul>
 	<% @events.each do |e| %>
-	<li><%= link_to e.title, event_path(e) %></li>
+	<li><%= link_to e.title, event_path(e) %> - <%= link_to "Edit", main_app.edit_event_path(e) %> | <%= link_to "Delete", main_app.event_path(e), method: :delete %></li>
 <% end %>
 </ul>
 </div>
