@@ -1,5 +1,14 @@
 <div class="box">
 <%= render 'partials/group_content', :item => @fireteam, :page => "Fireteam" %>
+<h3>Members:</h3>
+<% if !@fireteam.users.empty? %>
+<ul>
+<% @fireteam.users.each do |s| %>
+<li><h3><%= link_to s.name, user_path(s) %></h3></li>
+<% end %>
+<% else %>
+<p>None to show at this time.</p>
+<% end %>
 <% if bool_au? %>
 <%= link_to 'Edit', edit_fireteam_path(@fireteam) %> |
 <% end %>

@@ -1,5 +1,10 @@
 <div class="box">
 	<%= render 'partials/group_content', :item => @squad, :page => "Squad" %>
+	<h3>Fireteams:</h3>
+<ul>
+<% @squad.fireteams.each do |s| %>
+<li><h3><%= link_to s.name, fireteam_path(s) %></h3></li>
+<% end %>
 <% if bool_au? %>
 <%= link_to 'Edit', edit_squad_path(@squad) %> |
 <% end %>

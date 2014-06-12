@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140612184258) do
+ActiveRecord::Schema.define(version: 20140612194757) do
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -188,6 +188,7 @@ ActiveRecord::Schema.define(version: 20140612184258) do
     t.string   "name"
     t.boolean  "admin",                  default: false
     t.string   "rank",                   default: "Cadet"
+    t.integer  "fireteam_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

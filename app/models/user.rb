@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   end
 
   def full_name
-    "[#{rank}] #{name}"
+    "#{rank} #{name}"
   end
 
   private
