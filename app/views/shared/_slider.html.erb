@@ -1,10 +1,10 @@
 <div id="slideshow">
 	<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width:800px; height:400px; overflow: hidden;">
 		<div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 800px; 	height: 400px;">
-			<div><img u="image" src="http://www.arma3.com/images/screenshots/large/arma3_screenshot_03.jpg" /></div>
-			<div><img u="image" src="http://www.arma3.com/images/screenshots/large/arma3_screenshot_01.jpg" /></div>
-			<div><img u="image" src="http://www.arma3.com/images/screenshots/large/arma3_screenshot_06.jpg" /></div>
-			<div><img u="image" src="http://www.arma3.com/images/screenshots/large/arma3_screenshot_24.jpg" /></div>
+			<div><%= image_tag "arma3_screenshot_03.jpg", {u:"image"} %></div>
+			<div><%= image_tag "arma3_screenshot_01.jpg", {u:"image"} %></div>
+			<div><%= image_tag "arma3_screenshot_06.jpg", {u:"image"} %></div>
+			<div><%= image_tag "arma3_screenshot_24.jpg", {u:"image"} %></div>
 		</div>
 		<%= render 'partials/jssor_slider_bullet_14' %>
 	</div>
