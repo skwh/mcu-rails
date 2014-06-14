@@ -6,7 +6,6 @@
 <li><h3><%= link_to s.name, squad_path(s) %></h3></li>
 <% end %>
 <% if bool_au? %>
-<%= link_to 'Edit', edit_platoon_path(@platoon) %> |
+<%= link_to 'Edit', edit_platoon_path(@platoon) %>
 <% end %>
-<%= link_to 'Back', platoons_path %>
 </div>

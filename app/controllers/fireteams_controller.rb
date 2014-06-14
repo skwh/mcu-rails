@@ -21,6 +21,7 @@ class FireteamsController < ApplicationController
 
   # GET /fireteams/1/edit
   def edit
+    @users = User.all
   end
 
   # POST /fireteams

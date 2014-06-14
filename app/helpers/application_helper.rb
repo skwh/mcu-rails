@@ -47,10 +47,30 @@ module ApplicationHelper
 		return markdown_obj.render(text)
 	end
 
-	def mod_pack_getter #retrieves the content of the modpack for no-text-updates listing
-		yml_contents = open("http://173.224.120.11/repo/server.yml") { |f| f.read }
-		modpack_obj = YAML.load(yml_contents)
-		modpack = modpack_obj[:required_mods] + modpack_obj[:allowed_mods]
-		return modpack
+	def fireteam_helper(id)
+		Fireteam.find_by_id(id)
+	end
+
+	def fireteam_link_helper(id)
+		fireteam = fireteam_helper(id)
+		link_to fireteam.name + " Fireteam", main_app.fireteam_path(fireteam)
+	end
+
+	def squad_helper(id)
+		Squad.find_by_id(id)
+	end
+
+	def squad_link_helper(id)
+		squad = squad_helper(id)
+		link_to squad.name + " Squad", main_app.squad_path(squad)
+	end
+
+	def platoon_helper(id)
+		Platoon.find_by_id(id)
+	end
+
+	def platoon_link_helper(id)
+		platoon = platoon_helper(id)
+		link_to platoon.name + " Platoon", main_app.platoon_path(platoon)
 	end
 end

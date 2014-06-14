@@ -4,6 +4,10 @@
 <p>Email: <%= link_to @user.email, "mailto:#{@user.email}" %></p>
 <p><%= link_to "Edit details", main_app.edit_user_registration_path %></p>
 <% end %>
+<hr />
+<% if !@user.fireteam_id.nil? %>
+<p>Belongs to <%= fireteam_link_helper(@user.fireteam_id) %></p>
+<% end %>
 <% if !@user.news.nil? and !@user.news.empty? then %>
 <h3>News Items by <%= @user.full_name %></h3>
 <ul>
