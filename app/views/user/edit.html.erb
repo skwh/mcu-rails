@@ -1,0 +1,13 @@
+<div class="box">
+	<h2>Editing <%= @user.name %></h2>
+	<p>Email: <%= @user.email %></p>
+	<%= form_for(@user) do |u| %>
+		<%= u.label :rank %>
+		<%= select_tag(:rank, options_for_select(RanksData::RANKS_FORM,@user.rank)) %>
+		<br />
+		<%= u.label :admin %>
+		<%= u.check_box :admin %>
+		<br />
+		<%= u.submit "Save" %>
+	<% end %>
+</div>

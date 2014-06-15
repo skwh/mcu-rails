@@ -16,6 +16,12 @@ class StaticPagesController < ApplicationController
 	def media
 	end
 
+	def roster
+		@platoons = Platoon.all
+		@squads = Squad.all
+		@fireteams = Fireteam.all
+	end
+
 	def admin
 		@users = User.all
 		@news = News.all

@@ -1,0 +1,20 @@
+<div class="box">
+	<h2>Roster</h2>
+	<hr />
+	<% @platoons.each do |p| %>
+		<div class="platoon">
+			<h3><%= link_to p.full_name, platoon_path(p) %></h3>
+			<ul class="squad">
+				<% p.squads.each do |s| %>
+					<li><%= link_to s.full_name, squad_path(s) %>
+					<ul class="fireteam">
+						<% s.fireteams.each do |f| %>
+							<li><%= link_to f.name, fireteam_path(f) %></li>
+						<% end %>
+					</ul></li>
+				<% end %>
+			</ul>
+		</div>
+		<hr />
+	<% end %>
+</div>

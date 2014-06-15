@@ -1,12 +1,8 @@
 <div class="box">
-	<h2>All Users</h2>
-	<hr />
-	<div class="subbox">
-		<h3>Admins</h3>
-		<ul>
-			<% @admins.each do |a| %>
-				<li><%= link_to a.full_name, main_app.user_path(a) %></li>
-			<% end %>
-		</ul>
-	</div>
+	<h2>All 19th Members</h2>
+	<ul>
+	<% @users.each do |u| %>
+		<li><%= link_to u.full_name, user_path(u) %></li>
+	<% end %>
+	</ul>
 </div>

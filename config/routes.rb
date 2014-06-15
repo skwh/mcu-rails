@@ -10,6 +10,8 @@ McuRails::Application.routes.draw do
 
   resources :news
 
+  resources :user
+
   # This line mounts Forem's routes at /forums by default.
   # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
@@ -17,8 +19,6 @@ McuRails::Application.routes.draw do
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
   mount Forem::Engine, :at => '/forums'
 
-  get '/u/a' => 'user#index'
-  get '/u/:id' => 'user#show', as: :user
   devise_for :users
   
   root 'static_pages#home'
@@ -27,6 +27,7 @@ McuRails::Application.routes.draw do
   get 'handbook' => 'static_pages#handbook', as: :handbook
   get 'media' => 'static_pages#media', as: :media
   get 'admin' => 'static_pages#admin', as: :admin
+  get 'roster' => 'static_pages#roster', as: :roster
 
 
   # The priority is based upon order of creation: first created -> highest priority.

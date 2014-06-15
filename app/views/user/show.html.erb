@@ -1,19 +1,20 @@
 <div class="box">
-<h2><%= @user.name %></h2>
-<% if user_signed_in? and current_user == @user then %>
-<p>Email: <%= link_to @user.email, "mailto:#{@user.email}" %></p>
-<p><%= link_to "Edit details", main_app.edit_user_registration_path %></p>
-<% end %>
-<hr />
-<% if !@user.fireteam_id.nil? %>
-<p>Belongs to <%= fireteam_link_helper(@user.fireteam_id) %></p>
-<% end %>
-<% if !@user.news.nil? and !@user.news.empty? then %>
-<h3>News Items by <%= @user.full_name %></h3>
-<ul>
-<% @user.news.each do |n| %>
-<li><%= link_to n.title, main_app.news_path(n) %></li>
-<% end %>
-</ul>
-<% end %>
+	<h2><%= @user.name %> - <%= @user.rank %></h2>
+	<% if user_signed_in? and current_user == @user then %>
+		<p>Email: <%= link_to @user.email, "mailto:#{@user.email}" %></p>
+		<p><%= link_to "Edit details", main_app.edit_user_registration_path %></p>
+	<% end %>
+	<br />
+	<% if !@user.fireteam_id.nil? %>
+		<p>Belongs to <%= fireteam_link_helper(@user.fireteam_id) %></p>
+	<% end %>
+	<hr />
+	<% if !@user.news.nil? and !@user.news.empty? then %>
+		<h3>News Items by <%= @user.full_name %></h3>
+		<ul>
+			<% @user.news.each do |n| %>
+				<li><%= link_to n.title, main_app.news_path(n) %></li>
+			<% end %>
+		</ul>
+	<% end %>
 </div>
