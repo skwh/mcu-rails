@@ -15,16 +15,15 @@ class UserController < ApplicationController
 	end
 
 	def update
-		@user = User.find_by_id(params[:id])
-		params[:user].delete(:password) if params[:user][:password].blank?
-    	params[:user].delete(:password_confirmation) if params[:user][:password].blank? and params[:user][:password_confirmation].blank?
-    	if @user.update_attributes(params[:user])
-    		flash[:notice] = "Successfully updated User."
-    		redirect_to admin_path
+    @user = User.find_by_id(params[:id])
+    respond_to do |format|
+      if @user.update(user_params)
+    		format.html { redirect_to admin_path, notice: "User updated successfully"}
     	else
-    		render :action => 'edit'
+    		format.html { render action: 'edit' }
     	end
   	end
+  end
 
   	def destroy
   		@user = User.find_by_id(params[:id])
@@ -34,4 +33,12 @@ class UserController < ApplicationController
   		end
   	end
 
+  private
+    def set_user
+      @user = User.find(params[:id])
+    end
+
+    def user_params
+      params.require(:user).permit(:name, :email, :admin, :rank, :fireteam_id)
+    end
 end

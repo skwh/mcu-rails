@@ -17,9 +17,4 @@ class User < ActiveRecord::Base
   def full_name
     "#{rank} #{name}"
   end
-
-  private
-    def user_params
-      params.require(:user).permit(:name, :email, :admin, :rank)
-    end
 end

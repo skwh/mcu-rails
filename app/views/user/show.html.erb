@@ -1,5 +1,5 @@
 <div class="box">
-	<h2><%= @user.name %> - <%= @user.rank %></h2>
+	<h2><%= @user.name %> - <%= @user.rank %><% if @user.admin? %> - Admin<% end %></h2>
 	<% if user_signed_in? and current_user == @user then %>
 		<p>Email: <%= link_to @user.email, "mailto:#{@user.email}" %></p>
 		<p><%= link_to "Edit details", main_app.edit_user_registration_path %></p>
