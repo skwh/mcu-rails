@@ -5,6 +5,9 @@
 		<%= u.label :rank %>
 		<%= u.select(:rank, options_for_select(RanksData::RANKS_FORM,@user.rank)) %>
 		<br />
+		<%= u.label "Fireteam" %>
+		<%= u.select(:fireteam_id, options_for_select(fireteam_form_data,@user.fireteam_id)) %>
+		<br />
 		<%= u.label :admin %>
 		<%= u.check_box :admin %>
 		<br />

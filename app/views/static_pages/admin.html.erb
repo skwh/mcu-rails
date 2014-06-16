@@ -3,7 +3,7 @@
 <h3>Users</h3>
 <ul>
 <% @users.each do |u| %>
-	<li><%= link_to u.full_name, user_path(u) %><% if u != current_user %> | <%= link_to "Edit", main_app.edit_user_path(u) %><% else %>- This is you!<% end %></li>
+	<li><%= link_to u.full_name, user_path(u) %> | <%= link_to "Edit", main_app.edit_user_path(u) %></li>
 <% end %>
 </ul>
 <hr />
